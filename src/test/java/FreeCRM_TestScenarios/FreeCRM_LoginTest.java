@@ -12,6 +12,14 @@ public class FreeCRM_LoginTest extends baseTest{
 
 	LoginModule login;
 
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@BeforeMethod()
 	public void setup() {
