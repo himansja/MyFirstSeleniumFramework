@@ -12,15 +12,6 @@ public class FreeCRM_LoginTest extends baseTest{
 //This is edited
 	LoginModule login;
 
-	
-	
-	
-	
-	
-	
-	
-	
-
 	@BeforeMethod()
 	public void setup() {
 		login= new LoginModule(driver);	
