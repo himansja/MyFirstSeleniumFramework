@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 
+import utility.JavaScriptMethods;
+
 
 public class basePageObject {
 
@@ -36,31 +38,37 @@ public class basePageObject {
 
 	public void clickOnElement(By locator){
 		elm=findElementsafely(locator);
+		JavaScriptMethods.highlightElement(driver, elm);
 		elm.click();
 	}
 
 	public void sendTextOnElement(By locator, String text) {
 		elm =findElementsafely(locator);
+		JavaScriptMethods.highlightElement(driver, elm);
 		elm.sendKeys(text);
 	}
 	
 	public void getTextOfElement(By locator) {
 		elm = findElementsafely(locator);
+		JavaScriptMethods.highlightElement(driver, elm);
 		elm.getText();
 	}
 	
 	public void getAttributeOfElement(By locator, String name) {
 		elm = findElementsafely(locator);
+		JavaScriptMethods.highlightElement(driver, elm);
 		elm.getAttribute(name);
 	}
 	
 	public boolean isElementClickable(By locator) {
 		elm = findElementsafely(locator);
+		JavaScriptMethods.highlightElement(driver, elm);
 		return elm.isEnabled();
 	}
 	
 	public boolean isElementSelect(By locator) {
 		elm = findElementsafely(locator);
+		JavaScriptMethods.highlightElement(driver, elm);
 		return elm.isSelected();
 	}
 	

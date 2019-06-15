@@ -43,7 +43,8 @@ public class baseTest {
 		excel.excelReading(Projectpath,filename);
 		dirStruct =CreateDirectoryStructure.getReportingDirectory(config.getApplicationName(), Projectpath, currentDateTime);
 		htmlReportName = dirStruct + config.getApplicationName() + ".html";
-		ExtentManager.createInstance(dirStruct, config.getApplicationName(),"QA");
+		System.out.println(htmlReportName);
+		ExtentManager.createInstance(htmlReportName, config.getApplicationName(),"QA");
 	}
 
 	@BeforeMethod 
@@ -101,6 +102,7 @@ public class baseTest {
 
 	@AfterMethod
 	public void quitBrowser() {
+		ExtentManager.getInstance().flush();
 		driver.quit();
 	}
 

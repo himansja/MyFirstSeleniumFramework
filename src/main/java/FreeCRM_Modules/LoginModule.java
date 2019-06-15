@@ -26,6 +26,12 @@ public class LoginModule  {
 		loginpage.enterUsername(testCaseInputData.get("UserName"));
 		loginpage.enterPassword(testCaseInputData.get("Password"));
 		loginpage.submitLoginButton();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return homepage.getHomePageTitle();
 	}
 
