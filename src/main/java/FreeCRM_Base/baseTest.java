@@ -34,7 +34,6 @@ public class baseTest {
 		SimpleDateFormat formater= new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 		currentDateTime=formater.format(calendar.getTime());
 		System.out.println(currentDateTime);
-
 		Projectpath= System.getProperty("user.dir");  /**Setting up user directory path*/
 		config = new configFileReader(Projectpath);
 		config.loadPropertiesFile();	
@@ -52,7 +51,6 @@ public class baseTest {
 
 
 		System.out.println(Projectpath);  
-
 		String DriverPath= Projectpath+"/driver/chromedriver.exe" ;   /**Setting up driver directory path */
 		System.out.println(DriverPath);              
 
@@ -69,7 +67,7 @@ public class baseTest {
 		driver.get(config.getUrl());
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 
 
